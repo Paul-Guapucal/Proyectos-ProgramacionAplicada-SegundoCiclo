@@ -16,7 +16,7 @@ import java.util.Optional;
  * @author paul_
  */
 public class ControladorTelefono extends AbstractControlador<Telefono> {
-    
+
     @Override
     public boolean validar(Telefono objeto) {
         return true;
@@ -56,5 +56,5 @@ public class ControladorTelefono extends AbstractControlador<Telefono> {
     public Iterable<Telefono> listaTlfsUsers(Optional<Usuario> usuario) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-    
+
 }

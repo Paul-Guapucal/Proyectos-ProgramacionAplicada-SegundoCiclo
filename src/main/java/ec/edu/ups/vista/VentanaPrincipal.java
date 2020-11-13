@@ -5,8 +5,6 @@
  */
 package ec.edu.ups.vista;
 
-
-
 import ec.edu.ups.controlador.ControladorTelefono;
 import ec.edu.ups.controlador.ControladorUsuario;
 import javax.swing.JMenu;
@@ -14,7 +12,7 @@ import javax.swing.JMenuItem;
 
 /**
  *
- * @author Juanc
+ * @author paul_
  */
 public class VentanaPrincipal extends javax.swing.JFrame {
 
@@ -23,12 +21,8 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     private GestionTelefono gestionTelefono;
     private ListarTelefonosUsuarios listarTlfUsuarios;
     private Listartelefonos listarTelefonos;
-
-
-
- private ControladorUsuario controladorUsuario;
- private ControladorTelefono controladorTelefono;
-   
+    private ControladorUsuario controladorUsuario;
+    private ControladorTelefono controladorTelefono;
 
     /**
      * Creates new form VentanaPrincipal
@@ -37,17 +31,15 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         initComponents();
         gestionMenu.setVisible(false);
         CerrarSesionMenu.setVisible(false);
-         controladorUsuario = new ControladorUsuario();
-         controladorTelefono = new ControladorTelefono();
-      
-      
+        controladorUsuario = new ControladorUsuario();
+        controladorTelefono = new ControladorTelefono();
 
         ventanaIniciarSesion = new VentanaIniciarSesion(controladorUsuario, this);
         registrarUsuario = new RegistrarUsuario(controladorUsuario);
-     
-        gestionTelefono = new GestionTelefono(controladorTelefono,controladorUsuario);
-        listarTlfUsuarios = new ListarTelefonosUsuarios (controladorTelefono,controladorUsuario);
-        listarTelefonos = new Listartelefonos ( controladorTelefono);
+
+        gestionTelefono = new GestionTelefono(controladorTelefono, controladorUsuario);
+        listarTlfUsuarios = new ListarTelefonosUsuarios(controladorTelefono, controladorUsuario);
+        listarTelefonos = new Listartelefonos(controladorTelefono);
 
     }
 
@@ -74,8 +66,6 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     public JMenu getGestionMenu() {
         return gestionMenu;
     }
-
-   
 
     public JMenuItem getGestionTelefonoMenu() {
         return gestionTelefonoMenu;

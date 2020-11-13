@@ -5,19 +5,17 @@
  */
 package ec.edu.ups.vista;
 
-
 import ec.edu.ups.controlador.ControladorUsuario;
 import ec.edu.ups.modelo.Usuario;
 import javax.swing.JOptionPane;
 
 /**
  *
- * @author Juanc
+ * @author paul_
  */
 public class VentanaIniciarSesion extends javax.swing.JInternalFrame {
 
     private VentanaPrincipal ventanaPrincipal;
-
     private ControladorUsuario controladorUsuario;
 
     /**
@@ -49,14 +47,16 @@ public class VentanaIniciarSesion extends javax.swing.JInternalFrame {
         setClosable(true);
         setMaximizable(true);
 
-        lblCorreo.setFont(new java.awt.Font("Century", 1, 14)); // NOI18N
+        lblCorreo.setFont(new java.awt.Font("Century", 1, 18)); // NOI18N
         lblCorreo.setForeground(new java.awt.Color(255, 255, 255));
         lblCorreo.setText("Correo: ");
 
-        lblContra.setFont(new java.awt.Font("Century", 1, 14)); // NOI18N
+        lblContra.setFont(new java.awt.Font("Century", 1, 18)); // NOI18N
         lblContra.setForeground(new java.awt.Color(255, 255, 255));
         lblContra.setText("Contraseña:");
 
+        btnIniciarSesion.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        btnIniciarSesion.setForeground(new java.awt.Color(102, 102, 102));
         btnIniciarSesion.setText("Iniciar Sesion");
         btnIniciarSesion.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -73,7 +73,7 @@ public class VentanaIniciarSesion extends javax.swing.JInternalFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(0, 140, Short.MAX_VALUE)
+                .addGap(0, 115, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
@@ -105,7 +105,7 @@ public class VentanaIniciarSesion extends javax.swing.JInternalFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblContra)
                     .addComponent(txtPass, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 57, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 53, Short.MAX_VALUE)
                 .addComponent(btnIniciarSesion)
                 .addGap(49, 49, 49))
         );
@@ -125,7 +125,7 @@ public class VentanaIniciarSesion extends javax.swing.JInternalFrame {
             ventanaPrincipal.getIniciarSesionMenuItem().setVisible(false);
             ventanaPrincipal.getCerrarSesionMenu().setVisible(true);
             ventanaPrincipal.getGestionTelefonoMenu().setVisible(true);
-            
+
             ventanaPrincipal.getSalirMenuItem().setVisible(false);
             ventanaPrincipal.getRegistrarUsuarioMenuItem().setVisible(false);
             ventanaPrincipal.getGestionMenu().setVisible(true);
@@ -133,7 +133,7 @@ public class VentanaIniciarSesion extends javax.swing.JInternalFrame {
             this.dispose();
             JOptionPane.showMessageDialog(this, "Inicio de sesion exitoso");
         } else {
-            
+
             JOptionPane.showMessageDialog(this, "Usuario o contrasena incorrecta ");
             Limpiar();
         }

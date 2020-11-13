@@ -14,7 +14,7 @@ import java.util.Optional;
  * @author paul_
  */
 public abstract class AbstractControlador<E> {
-    
+
     private List<E> lista;
 
     public AbstractControlador() {
@@ -37,7 +37,7 @@ public abstract class AbstractControlador<E> {
     }
 
     public int posicion(E objetoC) {
-        for (int i = 0; i < lista.size() ; i++) {
+        for (int i = 0; i < lista.size(); i++) {
             E objetoL = lista.get(i);
             if (objetoL.equals(objetoC)) {
                 return i;
@@ -62,7 +62,7 @@ public abstract class AbstractControlador<E> {
 
     public boolean actualizar(E objetoA) {
         int pos = posicion(objetoA);
-        if (pos >=0) {
+        if (pos >= 0) {
             lista.set(pos, objetoA);
             System.out.println("TRUE");
             return true;
@@ -84,5 +84,5 @@ public abstract class AbstractControlador<E> {
     public void setLista(List<E> lista) {
         this.lista = lista;
     }
-    
+
 }

@@ -12,7 +12,7 @@ import ec.edu.ups.modelo.Usuario;
  * @author paul_
  */
 public class ControladorUsuario extends AbstractControlador<Usuario> {
-    
+
     private Usuario usuario;
 
     public ControladorUsuario() {
@@ -83,5 +83,5 @@ public class ControladorUsuario extends AbstractControlador<Usuario> {
     public void setUsuario(Usuario usuario) {
         this.usuario = usuario;
     }
-    
+
 }

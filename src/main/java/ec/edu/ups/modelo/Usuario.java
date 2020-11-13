@@ -12,7 +12,7 @@ import java.util.Objects;
  * @author paul_
  */
 public class Usuario {
-    
+
     private String Cedula;
     private String nombre;
     private String apellido;
@@ -101,5 +101,5 @@ public class Usuario {
     public String toString() {
         return "Usuario{" + "Cedula=" + Cedula + ", nombre=" + nombre + ", apellido=" + apellido + ", correo=" + correo + ", contrasena=" + contrasena + '}';
     }
-    
+
 }
