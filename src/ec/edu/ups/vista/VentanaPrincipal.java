@@ -16,7 +16,7 @@ import javax.swing.JMenuItem;
 
 /**
  *
- * @author user
+ * @author paul_
  */
 public class VentanaPrincipal extends javax.swing.JFrame {
 
@@ -37,15 +37,11 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         controladorPersona = new ControladorPersona("datos/Persona.obj");
         controladorAutoridad = new ControladorAutoridadCivil("datos/Autoridad.obj");
         controladorMatrimonio = new ControladorMatrimonio("datos/Matrimonio.obj");
-
         ventanaIniciarSesion = new VentanaIniciarSesion(this, controladorAutoridad);
         registrarPersona = new VentanaGestionPersona(controladorPersona);
         registrarMatrimonio = new VentanaRegistroMatrimonio(controladorPersona,controladorAutoridad,controladorMatrimonio);
-        
         registrarUsuario = new VentanaRegistroAutoridad(controladorAutoridad);
         
-        
-
     }
 
     @SuppressWarnings("unchecked")

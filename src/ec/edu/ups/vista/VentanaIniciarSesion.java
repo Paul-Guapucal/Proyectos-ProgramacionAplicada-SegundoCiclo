@@ -10,7 +10,7 @@ import javax.swing.JOptionPane;
 
 /**
  *
- * @author Juanc
+ * @author paul_
  */
 public class VentanaIniciarSesion extends javax.swing.JInternalFrame {
 

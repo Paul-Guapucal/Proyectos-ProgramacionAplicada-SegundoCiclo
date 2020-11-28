@@ -13,7 +13,7 @@ import javax.swing.table.DefaultTableModel;
 
 /**
  *
- * @author user
+ * @author paul_
  */
 public class VentanaListaRegistrosDeMatrimonio extends javax.swing.JInternalFrame {
 

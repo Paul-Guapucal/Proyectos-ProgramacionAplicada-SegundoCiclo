@@ -21,7 +21,7 @@ import javax.swing.table.DefaultTableModel;
 
 /**
  *
- * @author Juanc
+ * @author paul_
  */
 public class VentanaGestionPersona extends javax.swing.JInternalFrame {
 

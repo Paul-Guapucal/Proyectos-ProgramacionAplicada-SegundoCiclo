@@ -17,7 +17,7 @@ import javax.swing.JOptionPane;
 
 /**
  *
- * @author user
+ * @author paul_
  */
 public class VentanaRegistroAutoridad extends javax.swing.JInternalFrame {
 

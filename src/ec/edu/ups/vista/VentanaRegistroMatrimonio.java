@@ -22,7 +22,7 @@ import javax.swing.JOptionPane;
 
 /**
  *
- * @author user
+ * @author paul_
  */
 public class VentanaRegistroMatrimonio extends javax.swing.JInternalFrame {
     
