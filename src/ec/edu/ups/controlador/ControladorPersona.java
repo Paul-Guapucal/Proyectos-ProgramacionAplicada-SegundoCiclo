@@ -6,12 +6,19 @@
 package ec.edu.ups.controlador;
 
 import ec.edu.ups.modelo.Persona;
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
 
 /**
  *
  * @author paul_
  */
 public class ControladorPersona extends AbstractControlador<Persona> {
+
+    public ControladorPersona(String ruta) {
+        super(ruta);
+    }
     
     @Override
     public boolean validar(Persona objeto) {
@@ -59,4 +66,17 @@ public class ControladorPersona extends AbstractControlador<Persona> {
        
     }
     
+    public List<Persona> personas() {
+
+        List<Persona> listaP = new ArrayList();
+        Persona persona;
+        Iterator i = super.getLista().iterator();
+        while (i.hasNext()) {
+            persona = (Persona) i.next();
+            listaP.add(persona);
+
+        }
+        return listaP;
+
+    }
 }

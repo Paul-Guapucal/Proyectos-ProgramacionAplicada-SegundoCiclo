@@ -22,9 +22,12 @@ import java.util.Optional;
 public abstract class AbstractControlador<E> {
     
     private List<E> lista;
+    public String ruta;
 
-    public AbstractControlador() {
+    public AbstractControlador(String ruta) {
         lista = new ArrayList();
+        this.ruta=ruta;
+        cargarDatos();
     }
 
     public List<E> getLista() {
@@ -35,10 +38,17 @@ public abstract class AbstractControlador<E> {
         this.lista = lista;
     }
     
-    public void cargarDatos(String ruta) throws FileNotFoundException, IOException, ClassNotFoundException {
+    public void cargarDatos(){
+        
+        try{
         FileInputStream archivo = new FileInputStream(ruta);
-        ObjectInputStream datos = new ObjectInputStream(archivo);
-        lista = (List<E>) datos.readObject();
+        ObjectInputStream datos = new ObjectInputStream (archivo);
+        lista =(List<E>) datos.readObject();
+        }catch(ClassNotFoundException e){
+        e.printStackTrace();
+        }catch (IOException e){
+        e.printStackTrace();
+        }
     }
     
     public void guardarDatos(String ruta) throws FileNotFoundException, IOException {

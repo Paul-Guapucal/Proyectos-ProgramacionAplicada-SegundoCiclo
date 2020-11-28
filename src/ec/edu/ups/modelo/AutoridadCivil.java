@@ -16,17 +16,21 @@ public class AutoridadCivil extends Persona {
     
     private String cargo;
     private String correo;
-    private String contrasenia;
+    private String pass;
 
     public AutoridadCivil() {
     }
 
-    public AutoridadCivil(String cargo, String correo, String contrasenia, String cedula, String nombres, String apellidos, 
+    public AutoridadCivil(String cargo, String correo, String pass, String cedula, String nombres, String apellidos, 
             String direccion, String genero, Date fechaDeNacimiento, String estadoCivil, String rol) {
         super(cedula, nombres, apellidos, direccion, genero, fechaDeNacimiento, estadoCivil, rol);
         this.cargo = cargo;
         this.correo = correo;
-        this.contrasenia = contrasenia;
+        this.pass = pass;
+    }
+
+    public AutoridadCivil(String trim, String trim0, String trim1, String trim2, String trim3, Date fechaN, String trim4, String autoridad, String trim5, String trim6, String trim7) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     public String getCargo() {
@@ -45,23 +49,12 @@ public class AutoridadCivil extends Persona {
         this.correo = correo;
     }
 
-    public String getContrasenia() {
-        return contrasenia;
+    public String getPass() {
+        return pass;
     }
 
-    public void setContrasenia(String contrasenia) {
-        this.contrasenia = contrasenia;
-    }
-
-    
-    @Override
-    public boolean validarEstadoCivil(String estadoCivil) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    @Override
-    public boolean validarRol(String rol) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public void setPass(String contrasenia) {
+        this.pass = contrasenia;
     }
 
 }

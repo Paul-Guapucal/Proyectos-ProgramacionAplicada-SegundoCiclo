@@ -12,7 +12,7 @@ import java.util.Objects;
  *
  * @author paul_
  */
-public abstract class Persona {
+public class Persona {
     
     private String cedula;
     private String nombres;
@@ -100,10 +100,6 @@ public abstract class Persona {
     public void setRol(String rol) {
         this.rol = rol;
     }
-
-    public abstract boolean validarEstadoCivil(String estadoCivil);
-    
-    public abstract boolean validarRol(String rol);
     
     @Override
     public int hashCode() {
