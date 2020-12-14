@@ -6,23 +6,27 @@
 package ec.edu.ups.modelo;
 
 import java.io.Serializable;
+import java.util.Calendar;
 import java.util.Date;
 
 /**
  *
- * @author paul_
+ * @author user
  */
-public class Ingresos implements Serializable{
-    
+public class Ingresos implements Serializable {
+
     private int id;
-    private Date fechaHora;
+
+    private Calendar fechaHora;
+
     private String descripcion;
-    private double  ingreso;
+
+    private double ingreso;
 
     public Ingresos() {
     }
 
-    public Ingresos(int id, Date fechaHora, String descripcion, double ingreso) {
+    public Ingresos(int id, Calendar fechaHora, String descripcion, double ingreso) {
         this.id = id;
         this.fechaHora = fechaHora;
         this.descripcion = descripcion;
@@ -37,11 +41,11 @@ public class Ingresos implements Serializable{
         this.id = id;
     }
 
-    public Date getFechaHora() {
+    public Calendar getFechaHora() {
         return fechaHora;
     }
 
-    public void setFechaHora(Date fechaHora) {
+    public void setFechaHora(Calendar fechaHora) {
         this.fechaHora = fechaHora;
     }
 
@@ -85,5 +89,5 @@ public class Ingresos implements Serializable{
         }
         return true;
     }
-    
+
 }

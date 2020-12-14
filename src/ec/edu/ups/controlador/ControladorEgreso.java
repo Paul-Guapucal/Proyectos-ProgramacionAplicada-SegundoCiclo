@@ -12,25 +12,25 @@ import java.util.List;
 
 /**
  *
- * @author paul_
+ * @author user
  */
 public class ControladorEgreso extends AbstractControlador<Egresos> {
 
     public ControladorEgreso(String ruta) {
         super(ruta);
     }
-    
+
     @Override
     public boolean validar(Egresos objeto) {
         return false;
-       
+
     }
 
     @Override
     public int generarId() {
         List<Egresos> temp = new ArrayList();
-         super.getLista().stream().map(a -> (Egresos) a).forEachOrdered(m -> {
-             temp.add(m);
+        super.getLista().stream().map(a -> (Egresos) a).forEachOrdered(m -> {
+            temp.add(m);
         });
 
         if (temp.size() > 0 && temp != null) {
@@ -38,20 +38,20 @@ public class ControladorEgreso extends AbstractControlador<Egresos> {
         } else {
             return 1;
         }
-        
+
     }
-    
-     public List<Egresos> egresos() {
-        
+
+    public List<Egresos> egresos() {
+
         List<Egresos> lista = new ArrayList();
         Egresos u;
         Iterator i = super.getLista().iterator();
         while (i.hasNext()) {
             u = (Egresos) i.next();
             lista.add(u);
-            
+
         }
         return lista;
-        
+
     }
 }

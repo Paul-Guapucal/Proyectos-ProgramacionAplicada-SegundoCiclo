@@ -7,33 +7,33 @@ package ec.edu.ups.controlador;
 
 import ec.edu.ups.modelo.Tarifa;
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
 /**
  *
- * @author paul_
+ * @author user
  */
-public class ControladorTarifa extends AbstractControlador<Tarifa>{
-    
+public class ControladorTarifa extends AbstractControlador<Tarifa> {
+
     private Tarifa tarifa;
 
-    public ControladorTarifa(String ruta, Tarifa tarifa) {
+    public ControladorTarifa(String ruta) {
         super(ruta);
-        this.tarifa=tarifa;
-        
+
     }
-    
+
     @Override
     public boolean validar(Tarifa objeto) {
-        return false;
-        
+        return true;
+
     }
 
     @Override
     public int generarId() {
-         List<Tarifa> temp = new ArrayList();
-         super.getLista().stream().map(a -> (Tarifa) a).forEachOrdered(m -> {
-             temp.add(m);
+        List<Tarifa> temp = new ArrayList();
+        super.getLista().stream().map(a -> (Tarifa) a).forEachOrdered(m -> {
+            temp.add(m);
         });
 
         if (temp.size() > 0 && temp != null) {
@@ -41,7 +41,7 @@ public class ControladorTarifa extends AbstractControlador<Tarifa>{
         } else {
             return 1;
         }
-       
+
     }
 
     public Tarifa getTarifa() {
@@ -51,5 +51,18 @@ public class ControladorTarifa extends AbstractControlador<Tarifa>{
     public void setTarifa(Tarifa tarifa) {
         this.tarifa = tarifa;
     }
-    
+
+    public List<Tarifa> tarifas() {
+
+        List<Tarifa> lista = new ArrayList();
+        Tarifa u;
+        Iterator i = super.getLista().iterator();
+        while (i.hasNext()) {
+            u = (Tarifa) i.next();
+            lista.add(u);
+
+        }
+        return lista;
+
+    }
 }

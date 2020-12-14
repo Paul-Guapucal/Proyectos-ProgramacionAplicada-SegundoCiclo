@@ -5,7 +5,6 @@
  */
 package ec.edu.ups.controlador;
 
-
 import ec.edu.ups.modelo.Usuario;
 
 import java.util.ArrayList;
@@ -14,29 +13,29 @@ import java.util.List;
 
 /**
  *
- * @author paul_
+ * @author user
  */
 public class ControladorUsuario extends AbstractControlador<Usuario> {
-    
+
     private Usuario usuario;
-    
+
     public ControladorUsuario(String ruta) {
         super(ruta);
-        
+
     }
-    
+
     @Override
     public boolean validar(Usuario objeto) {
-        
+
         return true;
-        
+
     }
-    
+
     @Override
     public int generarId() {
-       List<Usuario> temp = new ArrayList();
-       super.getLista().stream().map(a -> (Usuario) a).forEachOrdered(m -> {
-           temp.add(m);
+        List<Usuario> temp = new ArrayList();
+        super.getLista().stream().map(a -> (Usuario) a).forEachOrdered(m -> {
+            temp.add(m);
         });
 
         if (temp.size() > 0 && temp != null) {
@@ -44,29 +43,29 @@ public class ControladorUsuario extends AbstractControlador<Usuario> {
         } else {
             return 1;
         }
-        
+
     }
-    
+
     public List<Usuario> usuarios() {
-        
+
         List<Usuario> lista = new ArrayList();
         Usuario u;
         Iterator i = super.getLista().iterator();
         while (i.hasNext()) {
             u = (Usuario) i.next();
             lista.add(u);
-            
+
         }
         return lista;
-        
+
     }
-    
+
     public Usuario getUsuario() {
         return usuario;
     }
-    
+
     public boolean iniciarSesion(String correo, String pass) {
-        
+
         for (Usuario usu : super.getLista()) {
             Usuario u = (Usuario) usu;
             if (u.getCorreo().equals(correo) && u.getPass().equals(pass)) {
@@ -75,6 +74,7 @@ public class ControladorUsuario extends AbstractControlador<Usuario> {
             }
         }
         return false;
-        
+
     }
+
 }

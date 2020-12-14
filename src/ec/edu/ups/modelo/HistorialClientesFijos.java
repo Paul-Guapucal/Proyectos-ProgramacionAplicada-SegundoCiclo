@@ -10,13 +10,15 @@ import java.util.Calendar;
 
 /**
  *
- * @author paul_
+ * @author user
  */
-public class HistorialClientesFijos  implements Serializable{
-    
+public class HistorialClientesFijos implements Serializable {
+
     private int id;
     private Calendar FechaHora;
+
     private String descripcion;
+
     private ClienteFijo clienteF;
 
     public HistorialClientesFijos() {
@@ -96,5 +98,5 @@ public class HistorialClientesFijos  implements Serializable{
         sb.append('}');
         return sb.toString();
     }
-    
+
 }

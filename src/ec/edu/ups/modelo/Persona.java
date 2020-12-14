@@ -1,24 +1,30 @@
 package ec.edu.ups.modelo;
+
 import java.io.Serializable;
 import java.util.Objects;
 
 /**
  *
- * @author paul_
+ * @author user
  */
 public class Persona implements Serializable {
 
     private String cedula;
+
     private String nombre;
+
     private String apellido;
+
     private String direccion;
+
     private String tlf;
 
-    public Persona(String cedula, String nombre, String apellido, String direccion,String telefono) {
+    public Persona(String cedula, String nombre, String apellido, String direccion, String telefono) {
         this.cedula = cedula;
         this.nombre = nombre;
         this.apellido = apellido;
-        this.tlf=telefono;
+        this.tlf = telefono;
+
         this.direccion = direccion;
     }
 

@@ -11,21 +11,41 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
- * @author paul_
+ * @author user
  */
-public class ControladorEspacios {
+public final class ControladorEspacios {
 
     Map<Integer, String> espacios;
 
     public ControladorEspacios() {
         this.espacios = new HashMap<>();
+        // cargarEspaciosDefault();
+
     }
-    
+
+    public void cargarEspaciosDefault() {
+        for (int i = 1; i <= 50; i++) {
+            espacios.put(i, "");
+
+        }
+        try {
+
+            guardarDatos();
+        } catch (IOException ex) {
+            Logger.getLogger(ControladorEspacios.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        System.out.println("ESPACIOS GENERADOS CORRECTAMENTE");
+    }
+
     public void cargarDatos() throws ClassNotFoundException, IOException {
         ObjectInputStream datos = null;
         try {
@@ -33,7 +53,6 @@ public class ControladorEspacios {
             FileInputStream a = new FileInputStream(f);
             datos = new ObjectInputStream(a);
 
-            
             espacios = (Map<Integer, String>) datos.readObject();
 
         } catch (IOException e) {
@@ -50,13 +69,31 @@ public class ControladorEspacios {
         datos.writeObject(espacios);
 
     }
-    
-    public boolean AsignarEspacio(int id, String cedula){
-        
-        if ( espacios.put(id, cedula)!=null){
-         return true;
-        }
-        return false;
-    
+
+    public boolean AsignarEspacio(int id, String cedula) {
+
+        return espacios.put(id, cedula) != null;
+
     }
+
+    public List<String> espaciosDisponibles() {
+        List<String> esp = new ArrayList<>();
+        espacios.entrySet().stream().filter(entry -> (entry.getValue().equals(""))).forEachOrdered(entry -> {
+            esp.add(entry.getKey().toString());
+        });
+        return esp;
+
+    }
+
+    public String buscarEspacioAsignado(int id) {
+        for (Map.Entry<Integer, String> entry : espacios.entrySet()) {
+
+            if (entry.getKey().equals("" + id)) {
+                return entry.getValue();
+            }
+
+        }
+        return null;
+    }
+
 }

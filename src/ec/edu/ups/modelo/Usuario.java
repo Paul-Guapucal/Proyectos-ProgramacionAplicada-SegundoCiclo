@@ -7,20 +7,20 @@ package ec.edu.ups.modelo;
 
 /**
  *
- * @author paul_
+ * @author user
  */
 public class Usuario extends Persona {
-    
+
     private int codigo;
     private String rol;
     private String correo;
     private String pass;
-    
+
     public Usuario(String cedula, String nombre, String apellido, String direccion, String telefono, String rol, String correo, String pass) {
         super(cedula, nombre, apellido, direccion, telefono);
-        this.rol=rol;
-        this.correo=correo;
-        this.pass=pass;
+        this.rol = rol;
+        this.correo = correo;
+        this.pass = pass;
     }
 
     public String getRol() {
@@ -90,5 +90,5 @@ public class Usuario extends Persona {
         sb.append('}');
         return sb.toString();
     }
-        
+
 }

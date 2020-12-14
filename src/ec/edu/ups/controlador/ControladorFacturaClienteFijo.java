@@ -11,25 +11,25 @@ import java.util.List;
 
 /**
  *
- * @author paul_
+ * @author user
  */
 public class ControladorFacturaClienteFijo extends AbstractControlador<FacturaClienteFijo> {
 
     public ControladorFacturaClienteFijo(String ruta) {
         super(ruta);
     }
-    
+
     @Override
     public boolean validar(FacturaClienteFijo objeto) {
         return false;
-        
+
     }
 
     @Override
     public int generarId() {
         List<FacturaClienteFijo> temp = new ArrayList();
-         super.getLista().stream().map(a -> (FacturaClienteFijo) a).forEachOrdered(m -> {
-             temp.add(m);
+        super.getLista().stream().map(a -> (FacturaClienteFijo) a).forEachOrdered(m -> {
+            temp.add(m);
         });
 
         if (temp.size() > 0 && temp != null) {
@@ -37,7 +37,7 @@ public class ControladorFacturaClienteFijo extends AbstractControlador<FacturaCl
         } else {
             return 1;
         }
-        
+
     }
-    
+
 }

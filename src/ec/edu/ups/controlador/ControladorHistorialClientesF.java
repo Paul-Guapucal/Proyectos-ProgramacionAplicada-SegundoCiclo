@@ -12,25 +12,25 @@ import java.util.List;
 
 /**
  *
- * @author paul_
+ * @author user
  */
-public class ControladorHistorialClientesF  extends AbstractControlador<HistorialClientesFijos> {
+public class ControladorHistorialClientesF extends AbstractControlador<HistorialClientesFijos> {
 
     public ControladorHistorialClientesF(String ruta) {
         super(ruta);
     }
-    
+
     @Override
     public boolean validar(HistorialClientesFijos objeto) {
         return false;
-        
+
     }
 
     @Override
     public int generarId() {
         List<HistorialClientesFijos> temp = new ArrayList();
-         super.getLista().stream().map(a -> (HistorialClientesFijos) a).forEachOrdered(m -> {
-             temp.add(m);
+        super.getLista().stream().map(a -> (HistorialClientesFijos) a).forEachOrdered(m -> {
+            temp.add(m);
         });
 
         if (temp.size() > 0 && temp != null) {
@@ -38,21 +38,21 @@ public class ControladorHistorialClientesF  extends AbstractControlador<Historia
         } else {
             return 1;
         }
-       
+
     }
-    
-     public List<HistorialClientesFijos> listaHistorialCF() {
-        
+
+    public List<HistorialClientesFijos> listaHistorialCF() {
+
         List<HistorialClientesFijos> lista = new ArrayList();
         HistorialClientesFijos u;
         Iterator i = super.getLista().iterator();
         while (i.hasNext()) {
             u = (HistorialClientesFijos) i.next();
             lista.add(u);
-            
+
         }
         return lista;
-        
+
     }
-    
+
 }
