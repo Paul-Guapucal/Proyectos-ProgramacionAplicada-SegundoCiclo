@@ -20,7 +20,7 @@ import java.util.logging.Logger;
 
 /**
  *
- * @author user
+ * @author paul_
  */
 public final class ControladorEspacios {
 

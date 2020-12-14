@@ -18,7 +18,7 @@ import javax.swing.JOptionPane;
 
 /**
  *
- * @author user
+ * @author paul_
  */
 public class ConsultaMulta extends javax.swing.JInternalFrame {
 

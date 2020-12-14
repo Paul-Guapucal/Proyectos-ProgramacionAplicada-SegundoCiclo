@@ -9,7 +9,7 @@ import java.io.Serializable;
 
 /**
  *
- * @author user
+ * @author paul_
  */
 public class FacturaClienteFijo implements Serializable {
 

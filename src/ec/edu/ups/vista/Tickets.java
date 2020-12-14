@@ -31,7 +31,7 @@ import javax.swing.table.DefaultTableModel;
 
 /**
  *
- * @author user
+ * @author paul_
  */
 public class Tickets extends javax.swing.JInternalFrame {
 

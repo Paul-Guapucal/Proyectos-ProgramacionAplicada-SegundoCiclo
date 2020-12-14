@@ -9,7 +9,7 @@ import java.util.Calendar;
 
 /**
  *
- * @author user
+ * @author paul_
  */
 public class ClienteFijo extends Persona {
 

@@ -11,7 +11,7 @@ import java.util.List;
 
 /**
  *
- * @author user
+ * @author paul_
  */
 public class ControladorFacturaClienteFijo extends AbstractControlador<FacturaClienteFijo> {
 

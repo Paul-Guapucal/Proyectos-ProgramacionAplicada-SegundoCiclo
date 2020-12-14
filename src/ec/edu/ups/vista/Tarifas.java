@@ -15,7 +15,7 @@ import javax.swing.JOptionPane;
 
 /**
  *
- * @author user
+ * @author paul_
  */
 public class Tarifas extends javax.swing.JInternalFrame {
 

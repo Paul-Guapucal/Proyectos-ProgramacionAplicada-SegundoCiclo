@@ -7,7 +7,7 @@ package ec.edu.ups.modelo;
 
 /**
  *
- * @author user
+ * @author paul_
  */
 public class Usuario extends Persona {
 

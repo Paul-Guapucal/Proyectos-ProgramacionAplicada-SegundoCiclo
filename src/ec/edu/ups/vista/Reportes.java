@@ -21,7 +21,7 @@ import javax.swing.table.DefaultTableModel;
 
 /**
  *
- * @author user
+ * @author paul_
  */
 public class Reportes extends javax.swing.JInternalFrame {
 

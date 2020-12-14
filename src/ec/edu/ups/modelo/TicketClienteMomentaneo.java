@@ -10,7 +10,7 @@ import java.util.Calendar;
 
 /**
  *
- * @author user
+ * @author paul_
  */
 public class TicketClienteMomentaneo implements Serializable {
 

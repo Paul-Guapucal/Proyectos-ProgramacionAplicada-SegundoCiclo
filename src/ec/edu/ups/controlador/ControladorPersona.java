@@ -9,7 +9,7 @@ import ec.edu.ups.modelo.Persona;
 
 /**
  *
- * @author user
+ * @author paul_
  */
 public class ControladorPersona extends AbstractControlador<Persona> {
 

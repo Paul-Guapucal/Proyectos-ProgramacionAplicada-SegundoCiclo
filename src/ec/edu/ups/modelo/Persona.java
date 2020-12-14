@@ -5,7 +5,7 @@ import java.util.Objects;
 
 /**
  *
- * @author user
+ * @author paul_
  */
 public class Persona implements Serializable {
 

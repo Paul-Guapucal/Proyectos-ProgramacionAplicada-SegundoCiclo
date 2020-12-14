@@ -17,7 +17,7 @@ import javax.swing.table.DefaultTableModel;
 
 /**
  *
- * @author user
+ * @author paul_
  */
 public class GestionUsuarios extends javax.swing.JInternalFrame {
 

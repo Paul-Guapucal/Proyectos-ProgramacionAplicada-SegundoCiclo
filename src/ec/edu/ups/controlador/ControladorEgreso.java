@@ -12,7 +12,7 @@ import java.util.List;
 
 /**
  *
- * @author user
+ * @author paul_
  */
 public class ControladorEgreso extends AbstractControlador<Egresos> {
 

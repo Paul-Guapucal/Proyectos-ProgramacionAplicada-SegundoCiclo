@@ -23,7 +23,7 @@ import javax.swing.table.DefaultTableModel;
 
 /**
  *
- * @author user
+ * @author paul_
  */
 public final class GestionClientesFijos extends javax.swing.JInternalFrame {
 

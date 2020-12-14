@@ -29,7 +29,7 @@ import javax.swing.table.DefaultTableModel;
 
 /**
  *
- * @author user
+ * @author paul_
  */
 public class FacturaClienteMo extends javax.swing.JInternalFrame {
 

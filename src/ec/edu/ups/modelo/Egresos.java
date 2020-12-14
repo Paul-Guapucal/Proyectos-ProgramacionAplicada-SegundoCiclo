@@ -11,7 +11,7 @@ import java.util.Date;
 
 /**
  *
- * @author user
+ * @author paul_
  */
 public class Egresos implements Serializable {
 
